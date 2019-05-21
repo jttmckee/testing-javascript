@@ -35,7 +35,12 @@ The following configuration should work
 }
 
 ```
-If you get an error, or warning, about corejs; either change the version number above to match the corejs in your' package.json' or install corejs 3:
+You also will need to add something that tells Babel what to transpile to.  I did this by adding the following to the 'package.json' :
+  `"browserslist": "> 0.25%"`
+This works at the moment.  I'm not sure it is ideal since what happens in the future when the market share of the pre ES6 browsers goes below 0.25%...
+
+###Note
+If you get an error, or warning, about corejs; either change the version number above to match the corejs in your 'package.json' or install corejs 3:
 `npm install --save core-js@3`
 (Don't do both!)
 
